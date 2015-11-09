@@ -18,27 +18,49 @@ text-decoration:none;
 /* Left half of the hero image */
 #leftHalf {
    background: url('../img/cover1.jpg') center center;
-   background-color: #FF4747;
-   background-blend-mode: multiply;
-   width: 50%;
-   position: absolute;
-   left: 0px;
-   height: 100%;
-   background-repeat:no-repeat;
-   background-size: cover;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Left half overlay color in rgba */
+.overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 71, 71, .6);
 }
 
 /* Right half of the hero image */
 #rightHalf {
    background: url('../img/cover2.jpg') center center;
-   background-color: #38a1d2;
-   background-blend-mode: multiply;
    width: 50%;
    position: absolute;
    right: 0px;
    height: 100%;
    background-repeat:no-repeat;
    background-size: cover;
+}
+
+/* Right half overlay color in rgba */
+.overlayBis {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(56, 161, 210, .6);
 }
 
 .intro {
@@ -175,6 +197,7 @@ animation-delay: 2s;
 ms-animation-delay: 2s;
 text-align: center;
 font-size:3em;
+z-index: 3;
 }
 
 #scrollDown a {
@@ -192,7 +215,7 @@ color:white;
 padding:0;
 }
 
-.overlay {
+.overlays {
   display: block;
   position: absolute;
   left: 0;
@@ -216,15 +239,13 @@ section {
 
 section.quote {
 width: 100%;
-background: url(../img/parallax.jpg) no-repeat 50% 0 fixed;
-background-color: #900;
-background-blend-mode: multiply;
+background: linear-gradient( rgba(153, 0, 0, .75), rgba(153, 0, 0, .75) ), url(../img/parallax.jpg) no-repeat 50% 0 fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 background-size: cover;
 -o-background-size: cover;
 height: 350px;
-}	
+}
 
 .quote-content {
 position: relative;
@@ -414,9 +435,7 @@ outline:0;
 
 section.skills {
 	width: 100%;
-background: url(../img/me2.jpg) no-repeat 50% 0 fixed;
-background-color: #38a1d2;
-background-blend-mode: multiply;
+background: linear-gradient( rgba(56, 161, 210, .75), rgba(56, 161, 210, .75) ), url(../img/me2.jpg) no-repeat 50% 0 fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 background-size: cover;
